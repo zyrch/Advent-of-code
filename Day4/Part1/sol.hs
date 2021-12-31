@@ -39,7 +39,7 @@ matrixFromList n m matrix = array ((1, 1),(n, m)) matrix
 
 zipWith2dIndex :: [[Int]] -> [((Int, Int), Int)]
 zipWith2dIndex x = [((i + 1, j + 1), a) | (i, b) <- zip [0..] x, 
-                                  (j, a) <- zip [0..] b]
+                                          (j, a) <- zip [0..] b]
 
 parseLists :: [String] -> [[Int]]
 parseLists = map ((map read) . words)
